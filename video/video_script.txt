@@ -1,0 +1,71 @@
+VIDEO SCRIPT: Teaching Gemma to Show Its Work
+Duration: 3 minutes (max)
+
+[0:00-0:15] INTRODUCTION
+---
+Visual: Title card "Teaching Gemma to Show Its Work"
+Narration: "Most language models give you answers, but they don't show their work. Today, I'll show you how to train Google's Gemma model to reason step-by-step using Tunix, Google's new JAX-native library for LLM post-training."
+
+[0:15-0:45] PROBLEM STATEMENT
+---
+Visual: Side-by-side comparison
+- Left: Model output without reasoning (just answer)
+- Right: Model output with reasoning trace
+
+Narration: "The problem is clear: models often get answers right, but we can't verify how they got there. By teaching models to show their reasoning process, we make them more transparent, trustworthy, and debuggable."
+
+[0:45-1:15] SOLUTION OVERVIEW
+---
+Visual: Architecture diagram showing:
+- Gemma2 2B base model
+- Tunix GRPO training
+- Reward function
+- Output format
+
+Narration: "Our solution uses Tunix's Group Relative Policy Optimization, or GRPO. We start with Gemma2 2B, fine-tune it with GRPO, and use a rubric-based reward function that evaluates both reasoning quality and answer correctness. The model learns to output structured reasoning traces before its final answer."
+
+[1:15-1:45] TRAINING PROCESS
+---
+Visual: Code snippets and training metrics
+- Data format
+- Reward function
+- Training loop
+- Loss curves
+
+Narration: "The training data includes diverse examples across math, science, and general reasoning. Each example has a question, step-by-step reasoning, and an answer. We use GRPO to generate multiple responses per prompt, compute rewards using our rubric system, and update the policy. The reward evaluates reasoning quality, answer correctness, trace coherence, and step clarity."
+
+[1:45-2:30] RESULTS AND EXAMPLES
+---
+Visual: Live examples of model outputs
+- Math problem with reasoning
+- Science explanation with reasoning
+- Before/after comparison
+
+Narration: "After training, the model outputs structured reasoning traces. For example, when asked about train speed, it first calculates distance divided by time, then provides the answer. For science questions, it breaks down complex processes step-by-step. The format is consistent: reasoning in tags, followed by the answer."
+
+[2:30-2:50] KEY INSIGHTS
+---
+Visual: Bullet points
+- Format compliance is crucial
+- Rubric-based rewards provide consistent evaluation
+- GRPO enables stable training
+
+Narration: "Key insights: First, format compliance is critical - we use heavy penalties to ensure the model learns the required structure. Second, rubric-based rewards with LLM-as-a-judge provide consistent evaluation across domains. Third, GRPO's group comparison mechanism enables stable training without verifiers."
+
+[2:50-3:00] CONCLUSION
+---
+Visual: Final model output example
+Narration: "By teaching models to show their work, we make AI more transparent and trustworthy. You can find the complete code, configs, and training pipeline in the attached notebook. Thanks for watching!"
+
+[END]
+
+---
+
+PRODUCTION NOTES:
+- Keep pace: ~150 words per minute
+- Use clear visuals: code, diagrams, examples
+- Show actual model outputs, not just descriptions
+- Include training metrics/graphs if available
+- Ensure audio is clear and background music is minimal
+- Add captions for accessibility
+
