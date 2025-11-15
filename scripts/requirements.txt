@@ -1,0 +1,12 @@
+jax>=0.4.0
+jaxlib>=0.4.0
+flax>=0.7.0
+optax>=0.1.0
+transformers>=4.30.0
+datasets>=2.10.0
+numpy>=1.24.0
+pandas>=2.0.0
+pyyaml>=6.0
+tqdm>=4.65.0
+# Install Tunix from GitHub: pip install git+https://github.com/google/tunix.git
+
