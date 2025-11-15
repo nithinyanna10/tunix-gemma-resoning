@@ -1,0 +1,37 @@
+Math Questions:
+1. If a train travels 120 miles in 2 hours, what is its average speed in miles per hour? Show your work.
+2. Solve for x: 3x + 7 = 22. Show each step.
+3. What is 15% of 240? Explain your calculation.
+4. A rectangle has length 8 cm and width 5 cm. What is its area? Show your reasoning.
+5. If 5 apples cost $2.50, how much do 12 apples cost? Show your calculation.
+
+Creative Writing:
+1. Write a short story about a robot learning to paint. Include the robot's thought process.
+2. Describe a day in the life of a time traveler. Show their reasoning about time paradoxes.
+3. Create a dialogue between two characters meeting for the first time. Explain your character choices.
+
+Creative Ideation:
+1. Design a new type of transportation. Explain your design choices step by step.
+2. Propose three solutions to reduce plastic waste. Explain the reasoning behind each.
+3. Brainstorm features for a mobile app that helps people learn languages. Show your thought process.
+
+Summarization:
+1. Summarize the main themes of climate change. Explain what makes each theme important.
+2. Provide a brief summary of how machine learning works. Show your understanding step by step.
+3. Summarize the key points of effective communication. Explain why each point matters.
+
+Coding:
+1. Write a function to find the maximum number in a list. Explain your algorithm.
+2. Explain how a binary search works. Show the step-by-step process.
+3. Design a simple database schema for a library. Explain your design decisions.
+
+Basic Science:
+1. Explain how photosynthesis works. Break down each step of the process.
+2. Describe the water cycle. Show how each stage connects to the next.
+3. Explain why the sky is blue. Show your reasoning step by step.
+
+General Reasoning:
+1. If all roses are flowers, and this is a rose, what can we conclude? Show your logical reasoning.
+2. Explain the difference between correlation and causation. Use examples in your reasoning.
+3. Why do we have leap years? Show your step-by-step understanding.
+

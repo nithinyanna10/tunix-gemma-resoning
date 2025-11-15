@@ -1,0 +1,31 @@
+Math Reasoning Rubric
+
+Score 0-10 based on the following criteria:
+
+1. Problem Understanding (0-2 points)
+   - 2: Correctly identifies the problem type and key information
+   - 1: Partially understands the problem
+   - 0: Misunderstands the problem
+
+2. Solution Strategy (0-2 points)
+   - 2: Chooses appropriate method/strategy
+   - 1: Strategy is partially appropriate
+   - 0: Wrong strategy or no clear strategy
+
+3. Step-by-Step Execution (0-3 points)
+   - 3: All steps are correct and clearly shown
+   - 2: Most steps correct with minor errors
+   - 1: Some steps correct but significant errors
+   - 0: Major errors in execution
+
+4. Final Answer (0-2 points)
+   - 2: Correct answer
+   - 1: Close approximation or minor error
+   - 0: Incorrect answer
+
+5. Explanation Quality (0-1 point)
+   - 1: Clear explanation of why each step is taken
+   - 0: Lacks explanation or unclear
+
+Total: Sum of all points (0-10)
+

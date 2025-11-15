@@ -1,0 +1,28 @@
+Reasoning Quality Rubric
+
+Score 0-10 based on the following criteria:
+
+1. Logical Flow (0-3 points)
+   - 3: Reasoning steps follow a clear, logical progression
+   - 2: Mostly logical with minor gaps
+   - 1: Some logical steps but significant gaps
+   - 0: No clear logical progression
+
+2. Step Clarity (0-3 points)
+   - 3: Each step is clearly explained and easy to follow
+   - 2: Steps are mostly clear with minor ambiguities
+   - 1: Steps are somewhat unclear or confusing
+   - 0: Steps are unclear or missing
+
+3. Completeness (0-2 points)
+   - 2: All necessary steps are included
+   - 1: Most steps included but some gaps
+   - 0: Critical steps missing
+
+4. Correctness of Reasoning (0-2 points)
+   - 2: All reasoning steps are factually correct
+   - 1: Mostly correct with minor errors
+   - 0: Significant factual errors in reasoning
+
+Total: Sum of all points (0-10)
+

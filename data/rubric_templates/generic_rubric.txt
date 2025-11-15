@@ -1,0 +1,28 @@
+Generic Reasoning Rubric
+
+Score 0-10 based on the following criteria:
+
+1. Understanding (0-2 points)
+   - 2: Demonstrates clear understanding of the question/task
+   - 1: Shows partial understanding
+   - 0: Misunderstands the question/task
+
+2. Reasoning Process (0-3 points)
+   - 3: Clear, logical reasoning process
+   - 2: Mostly logical with some gaps
+   - 1: Some reasoning but significant gaps
+   - 0: No clear reasoning process
+
+3. Answer Quality (0-3 points)
+   - 3: Answer is correct, complete, and well-supported
+   - 2: Answer is mostly correct and supported
+   - 1: Answer is partially correct or incomplete
+   - 0: Answer is incorrect or not supported
+
+4. Clarity and Coherence (0-2 points)
+   - 2: Very clear and coherent throughout
+   - 1: Mostly clear with minor issues
+   - 0: Unclear or incoherent
+
+Total: Sum of all points (0-10)
+
