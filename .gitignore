@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Model files
+model_checkpoints/
+gemma/
+*.ckpt
+*.pth
+*.safetensors
+*.bin
+
+# Data
+data/*.jsonl
+!data/synthetic_reasoning_set.jsonl
+!data/sample_prompts.txt
+!data/rubric_templates/
+
+# Logs
+logs/
+*.log
+tensorboard/
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Outputs
+outputs/
+results/
+*.png
+*.jpg
+*.jpeg
+!writeup/media/*.png
+!writeup/media/*.jpg
+
+# Temporary
+tmp/
+temp/
+*.tmp
+
