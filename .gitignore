@@ -14,7 +14,7 @@ ENV/
 *.ipynb_checkpoints
 
 # Model files
-model_checkpoints/
+# model_checkpoints/  # Commented out to allow pushing checkpoints
 gemma/
 *.ckpt
 *.pth
