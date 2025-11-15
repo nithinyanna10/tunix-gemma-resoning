@@ -1,0 +1,14 @@
+[
+  {
+    "step": 5,
+    "avg_reward": 0.31749999999999995,
+    "format_compliance": 100.0,
+    "epoch": 1
+  },
+  {
+    "step": 10,
+    "avg_reward": 0.1175,
+    "format_compliance": 100.0,
+    "epoch": 2
+  }
+]
