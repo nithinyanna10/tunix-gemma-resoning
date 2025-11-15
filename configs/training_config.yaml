@@ -1,0 +1,114 @@
+# Main Training Configuration
+# Combines GRPO config with training-specific settings
+
+# Model configuration
+model:
+  base_model: "gemma2-2b"  # Options: "gemma2-2b", "gemma3-1b"
+  model_path: "gemma/"  # Local path to model files
+  tokenizer_path: "gemma/"  # Local path to tokenizer
+  
+  # Generation parameters
+  max_new_tokens: 512
+  max_reasoning_tokens: 256
+  max_answer_tokens: 128
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  do_sample: true
+
+# Training hyperparameters
+training:
+  num_epochs: 2  # Reduced for demo
+  batch_size: 2  # Smaller for CPU/GPU
+  gradient_accumulation_steps: 4  # Effective batch size = 8
+  learning_rate: 5e-6
+  lr_scheduler: "cosine"
+  warmup_ratio: 0.1
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # GRPO parameters
+  grpo_config: "configs/grpo_config.yaml"
+  group_size: 2  # Reduced for demo
+  kl_coefficient: 0.1
+  clip_range: 0.2
+  
+  # Checkpointing
+  save_strategy: "steps"
+  save_steps: 500
+  save_total_limit: 3
+  load_best_model_at_end: true
+  
+  # Evaluation
+  eval_strategy: "steps"
+  eval_steps: 10  # More frequent for demo
+  evaluation_metric: "reward_score"
+  
+  # Logging
+  logging_steps: 5  # More frequent for demo
+  logging_dir: "logs/"
+  report_to: "tensorboard"  # or "wandb" if using Weights & Biases
+
+# Data configuration
+data:
+  train_file: "data/synthetic_reasoning_set.jsonl"
+  eval_file: "data/synthetic_reasoning_set.jsonl"
+  max_train_samples: 50  # Limit for demo
+  max_eval_samples: 10
+  
+  # Data processing
+  prompt_template: |
+    Answer the following question. Show your reasoning step by step, then provide your final answer.
+    
+    Question: {question}
+    
+    Format your response as:
+    <reasoning>
+    Your step-by-step reasoning here
+    </reasoning>
+    <answer>
+    Your final answer here
+    </answer>
+  
+  # Data augmentation
+  augment: false
+  augmentation_ratio: 0.1
+
+# Reward configuration
+reward:
+  config_file: "configs/reward_config.yaml"
+  reward_model: "gemma2-2b"  # Model to use as reward model (LLM-as-a-judge)
+  
+# Output configuration
+output:
+  output_dir: "model_checkpoints/"
+  run_name: "gemma-reasoning-{timestamp}"
+  
+  # Format requirements
+  required_format: true
+  reasoning_tag: "<reasoning>"
+  answer_tag: "<answer>"
+  format_penalty_weight: 0.5
+
+# Hardware configuration
+hardware:
+  device: "cpu"  # "cpu", "gpu", "tpu"
+  mixed_precision: false
+  compile: true  # JAX JIT compilation
+  num_workers: 4  # Data loading workers
+  
+  # Memory optimization
+  gradient_checkpointing: true
+  offload_to_cpu: false  # Set to true if running out of memory
+
+# Reproducibility
+seed: 42
+deterministic: true
+
+# Multi-session training (optional)
+multi_session:
+  enabled: false
+  session_id: 1
+  checkpoint_to_resume: null
+  kaggle_model_name: null  # For Kaggle model submission
+

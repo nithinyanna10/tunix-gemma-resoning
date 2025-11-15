@@ -1,0 +1,71 @@
+# Reward Function Configuration
+# Defines how to evaluate and reward model outputs
+
+reward_components:
+  - name: "reasoning_quality"
+    weight: 0.4
+    rubric_file: "data/rubric_templates/reasoning_rubric.txt"
+    evaluation_method: "llm_judge"  # or "rule_based"
+    
+  - name: "answer_correctness"
+    weight: 0.3
+    rubric_file: "data/rubric_templates/generic_rubric.txt"
+    evaluation_method: "llm_judge"
+    # For verifiable domains (math, coding), can use "rule_based"
+    
+  - name: "trace_coherence"
+    weight: 0.2
+    rubric_file: "data/rubric_templates/reasoning_rubric.txt"
+    evaluation_method: "llm_judge"
+    # Checks if reasoning steps logically connect
+    
+  - name: "step_clarity"
+    weight: 0.1
+    rubric_file: "data/rubric_templates/reasoning_rubric.txt"
+    evaluation_method: "llm_judge"
+    # Evaluates clarity of individual reasoning steps
+
+llm_judge:
+  model: "gemma2-2b"  # Model to use for LLM-as-a-judge
+  temperature: 0.0  # Deterministic evaluation
+  max_tokens: 512
+  
+  # Prompt template for judge
+  judge_prompt_template: |
+    You are evaluating a model's reasoning trace and answer.
+    
+    Question: {question}
+    Reasoning Trace: {reasoning}
+    Answer: {answer}
+    
+    Rubric: {rubric}
+    
+    Score (0-10): 
+
+rule_based:
+  # For verifiable domains like math
+  math:
+    check_format: true
+    verify_steps: true
+    allow_approximation: false
+    
+  coding:
+    run_tests: false  # Set to true if you have test cases
+    syntax_check: true
+
+reward_shaping:
+  # Bonus rewards
+  reasoning_length_bonus: false  # Don't reward just for length
+  step_count_bonus: false  # Don't reward just for more steps
+  
+  # Penalties
+  repetition_penalty: -0.1  # Penalize repetitive reasoning
+  hallucination_penalty: -0.2  # Penalize factually incorrect steps
+  
+  # Format compliance
+  format_penalty: -0.5  # Heavy penalty for not following <reasoning></reasoning><answer></answer> format
+
+normalization:
+  method: "min_max"  # or "z_score"
+  clip_range: [-1, 1]  # Clip rewards to this range
+
